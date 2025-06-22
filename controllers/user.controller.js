@@ -40,6 +40,13 @@ export const register = async (req, res) => {
 
         return res.status(201).json({
             message: "Account created successfully.",
+            user: {
+                fullname,
+                email,
+                phoneNumber,
+                role,
+                profilePhoto: cloudResponse.secure_url
+            },
             success: true
         });
     } catch (error) {
