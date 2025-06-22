@@ -16,7 +16,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const cors = require("cors");
 
 app.use(cors({
   origin: "https://benevolent-melomakarona-5e0934.netlify.app",
@@ -31,7 +30,6 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
-
 
 
 app.listen(PORT,()=>{
